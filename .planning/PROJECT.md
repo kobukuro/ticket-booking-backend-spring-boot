@@ -24,8 +24,7 @@ A working end-to-end event booking flow — from creating events to consumers su
 ### Future
 
 - User authentication / JWT — add with api-gateway
-- Ticket service — handle ticket purchasing, order records, inventory deduction
-- Payment integration (payment-service)
+- Ticket service — handle ticket purchasing, order records, inventory deduction, payment
 - API Gateway for routing and auth
 - Service Discovery (Eureka) — add when multiple services exist
 
@@ -41,7 +40,7 @@ A working end-to-end event booking flow — from creating events to consumers su
 
 ## Constraints
 
-- **Tech stack**: Java 21, Spring Boot 3.3.x, Maven, PostgreSQL, JPA, Lombok
+- **Tech stack**: Java 21, Spring Boot 3.3.x, Maven, PostgreSQL, JPA, Lombok, Redis
 - **Port convention**: event-service on 8081, reserve 8080 for future API Gateway
 
 ## Key Decisions
@@ -52,6 +51,8 @@ A working end-to-end event booking flow — from creating events to consumers su
 | Use Lombok | Reduce boilerplate for entities and DTOs | — Pending |
 | Multi-module Maven structure | Easy to add new microservice modules later | — Pending |
 | Port 8081 for event-service | Reserve 8080 for API Gateway | — Pending |
+| Redis distributed lock (Redisson) for ticket booking | Best practice for concurrency control, auto-expiry via TTL | — Pending |
+| Payment inside ticket-service | Avoids distributed transaction complexity, split later if needed | — Pending |
 
 ## Evolution
 
