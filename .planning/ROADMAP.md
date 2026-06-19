@@ -27,7 +27,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Starting event-service connects to PostgreSQL and Flyway applies the event table migration automatically
   3. MapStruct generates DTO-to-entity and entity-to-DTO mappers at compile time without manual mapping code
   4. The event entity uses UUID primary keys and includes all fields: name, description, category, venue, city, date/time, ticket count, price, and status
-**Plans**: TBD
+**Plans**: 2 plans
+- [ ] 01-01-PLAN.md — Multi-module Maven scaffold, wrapper, Spring Boot app, application.yml, docker-compose (INFR-01)
+- [ ] 01-02-PLAN.md — Flyway V1 migration, Event entity + enums, repository, DTO, MapStruct mapper, Testcontainers verification (INFR-02, INFR-04)
 
 ### Phase 2: Event CRUD & Business Logic
 **Goal**: API consumers can create, read, update, delete, filter, and paginate events through REST endpoints on port 8081
