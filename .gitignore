@@ -2,3 +2,4 @@
 .planning/research/.cache/
 .env
 **/application-local.yml
+**/target/
