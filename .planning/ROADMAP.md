@@ -53,7 +53,17 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Sending DELETE to `/api/events/{id}` removes the event and subsequent GET for that ID returns 404
   5. Events have status values (UPCOMING, ONGOING, COMPLETED, CANCELLED) and GET `/api/events/upcoming` returns only future events sorted by date
 
-**Plans**: TBD
+**Plans**: 4 plans
+
+**Wave 1** *(no dependencies)*
+
+- [ ] 02-01-PLAN.md — Shared infrastructure: V6 migration, EventStatus DRAFT, EventRepository JpaSpecificationExecutor, EventSpecification, request DTOs (8), PagedResponse, mapper partial-update methods, Jackson SNAKE_CASE (EVNT-06, EVNT-07, EVNT-09, EVNT-10)
+
+**Wave 2** *(blocked on Wave 1 completion — all three run in parallel)*
+
+- [ ] 02-02-PLAN.md — Venue + Performer full CRUD API: VenueService, VenueController, PerformerService, PerformerController with integration tests (EVNT-01)
+- [ ] 02-03-PLAN.md — Event full CRUD API: EventService (13 methods), EventController (13 endpoints), state machine, filtering, upcoming endpoint (EVNT-01 through EVNT-10)
+- [ ] 02-04-PLAN.md — Ticket API with DRAFT-event guard: TicketRepository, TicketService, TicketController with integration tests (EVNT-01)
 
 ### Phase 3: API Quality & Documentation
 
