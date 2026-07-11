@@ -29,7 +29,7 @@
     "ui_safety_gate": true,
     "ai_integration_phase": true,
     "human_verify_mode": "end-of-phase",
-    "text_mode": false,
+    "text_mode": true,
     "research_before_questions": false,
     "discuss_mode": "discuss",
     "skip_discuss": false,
